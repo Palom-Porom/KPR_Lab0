@@ -42,8 +42,11 @@ function main()
         return;
     }
 
-    const a = parseFloat(inputA);
-    const b = parseFloat(inputB);
+    let a = parseFloat(inputA);
+    let b = parseFloat(inputB);
+    if (b < a) {
+        [a, b] = [b, a];
+    }
 
     if (isNaN(a) || isNaN(b)) {
         alert("Ошибка: введены некорректные числа!");
